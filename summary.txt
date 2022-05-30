@@ -1,0 +1,45 @@
+Firslty ruby and rails are installed 
+refer - https://youtu.be/fmyvWz5TUWg
+    - install all dependencies
+    - then reinstall latest version of rails to over ride previous ones
+create a directory for project
+create new porject by 
+    - rails new (project_name)
+to run server - rails s
+
+create views template by using command
+    - rails g controller home index
+                    (folder_name) (file_name)
+
+
+urls are mapped in routes.rb 
+base.html,footer and header are defined in applications.html.erb
+controller is defined in application_controller.erb
+
+defining database and model
+in terminal - rails g scaffold friends first_name:string last_name:string email:string phone:string insta:string
+name:data_type
+
+makemigrations
+rails db:migrate
+
+
+for adding sign in and sign out features we use devise
+
+############ commands #############
+$ gem 'devise'
+
+$ rails generate devise:install
+
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+$ rails generate devise users
+
+$ rails db:migrate
+
+###############################
+refer - (https://github.com/heartcombo/devise)
+
+map them in to navbar in _header.html
+
+in route.rb configure the sign out
